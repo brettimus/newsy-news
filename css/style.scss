@@ -1,0 +1,172 @@
+$black  : #222;
+$white  : #fff;
+$red    : #AE2B3D;
+$purple : #4208A1;
+$blue   : #115ABC;
+$green  : #00A24F;
+$yellow : #F7C019;
+$orange : #ED8C18;
+
+$gray-light: #959595;
+$gray: #666;
+
+$white-ish: #f4f4f4;
+
+$serif      : serif;
+$sans-serif : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+
+$light  : 300;
+$normal : 400;
+$semi   : 600;
+
+body {
+  font-family: $sans-serif;
+}
+
+a {
+  color: $blue;
+}
+
+header {
+
+  nav {
+    box-sizing: border-box;
+    font-weight: $semi;
+    height: 70px;
+    padding: 1.2em .5em 1.4em;
+    text-align: center;
+  }
+}
+
+.feed {
+  // nyu
+}
+
+.item {
+  border-bottom: solid 2px $white-ish; 
+  box-sizing: border-box;
+  padding: 2em 0;
+  padding-left: 50px; // for upvote
+  position: relative;
+  width: 100%;
+
+  &:first-of-type {
+   border-top: solid 2px $white-ish; 
+  }
+}
+
+.item-upvote {
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  padding-top: 2em;
+  text-align: center;
+  top: 0;
+  width: 50px;
+}
+
+.item-main {
+  overflow-x: hidden;
+}
+
+.item-body {
+  position: relative;
+}
+
+.item-footer {
+  box-sizing: border-box;
+  padding-top: .75em;
+  width: 100%;
+}
+
+.item-title {
+  text-decoration: none;
+  
+  h3 {
+    margin: 1.2em 0;
+    margin: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.item-meta {
+  display: block;
+  font-size: .8em;
+  font-weight: $light;
+}
+
+.item-meta-url {
+  color: $gray-light;
+  display: inline-block;
+  margin: 0 .1em;
+}
+
+.item-meta-timestamp {
+  color: $gray;
+}
+
+.item-meta-author {
+  border-bottom: solid 1px $red;
+  color: $gray;
+  display: inline-block;
+  padding-bottom: 1px;
+  text-decoration: none;
+}
+
+.item-action {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: $black;
+  display: inline-block;
+  font-weight: $light;
+  margin: 0;
+}
+
+.item-action-icon {
+  
+}
+
+.item-action-microcopy {
+  color: $gray;
+  display: inline-block;
+  font-size: .8em;
+  padding: .1em .2em .2em;
+}
+
+// NEEDS a rethink
+// i'd be a fan of doing fixed-width item actions.
+// they don't need to be as big as they are!
+.item-action-container {
+  min-height: 48px;
+  position: relative;
+}
+
+.item-action-1-2 {
+  position: absolute;
+  width: 50%;
+}
+
+.item-action-1-2-left {
+  bottom: 0;
+  left: 0;
+}
+
+.item-action-1-2-right {
+  bottom: 0;
+  right: 0;
+}
+
+/*
+ * PURE Breakpoints
+ *
+ * sm  @media screen and (min-width: 35.5em) ≥ 568px .pure-u-sm-*
+ * md  @media screen and (min-width: 48em) ≥ 768px .pure-u-md-*
+ * lg  @media screen and (min-width: 64em) ≥ 1024px  .pure-u-lg-*
+ * xl  @media screen and (min-width: 80em) ≥ 1280px  .pure-u-xl-*
+ *
+ */

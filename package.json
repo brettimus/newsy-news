@@ -1,0 +1,17 @@
+{
+  "name": "ed-news",
+  "version": "0.0.0",
+  "description": "hacker / designer news clone for higher ed professionals",
+  "main": "",
+  "dependencies": {
+    "express": "^4.13.3",
+    "cool-ascii-faces": "^1.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "author": "boots <brbeut@gmail.com> (http://brettim.us/)",
+  "license": ""
+}

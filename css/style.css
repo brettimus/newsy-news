@@ -1,0 +1,115 @@
+@charset "UTF-8";
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
+
+a {
+  color: #115ABC; }
+
+header nav {
+  box-sizing: border-box;
+  font-weight: 600;
+  height: 70px;
+  padding: 1.2em .5em 1.4em;
+  text-align: center; }
+
+.item {
+  border-bottom: solid 2px #f4f4f4;
+  box-sizing: border-box;
+  padding: 2em 0;
+  padding-left: 50px;
+  position: relative;
+  width: 100%; }
+  .item:first-of-type {
+    border-top: solid 2px #f4f4f4; }
+
+.item-upvote {
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  padding-top: 2em;
+  text-align: center;
+  top: 0;
+  width: 50px; }
+
+.item-main {
+  overflow-x: hidden; }
+
+.item-body {
+  position: relative; }
+
+.item-footer {
+  box-sizing: border-box;
+  padding-top: .75em;
+  width: 100%; }
+
+.item-title {
+  text-decoration: none; }
+  .item-title h3 {
+    margin: 1.2em 0;
+    margin: 0; }
+  .item-title:hover {
+    text-decoration: underline; }
+
+.item-meta {
+  display: block;
+  font-size: .8em;
+  font-weight: 300; }
+
+.item-meta-url {
+  color: #959595;
+  display: inline-block;
+  margin: 0 .1em; }
+
+.item-meta-timestamp {
+  color: #666; }
+
+.item-meta-author {
+  border-bottom: solid 1px #AE2B3D;
+  color: #666;
+  display: inline-block;
+  padding-bottom: 1px;
+  text-decoration: none; }
+
+.item-action {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  color: #222;
+  display: inline-block;
+  font-weight: 300;
+  margin: 0; }
+
+.item-action-microcopy {
+  color: #666;
+  display: inline-block;
+  font-size: .8em;
+  padding: .1em .2em .2em; }
+
+.item-action-container {
+  min-height: 48px;
+  position: relative; }
+
+.item-action-1-2 {
+  position: absolute;
+  width: 50%; }
+
+.item-action-1-2-left {
+  bottom: 0;
+  left: 0; }
+
+.item-action-1-2-right {
+  bottom: 0;
+  right: 0; }
+
+/*
+ * PURE Breakpoints
+ *
+ * sm  @media screen and (min-width: 35.5em) ≥ 568px .pure-u-sm-*
+ * md  @media screen and (min-width: 48em) ≥ 768px .pure-u-md-*
+ * lg  @media screen and (min-width: 64em) ≥ 1024px  .pure-u-lg-*
+ * xl  @media screen and (min-width: 80em) ≥ 1280px  .pure-u-xl-*
+ *
+ */
+
+/*# sourceMappingURL=style.css.map */
