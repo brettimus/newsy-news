@@ -4,6 +4,8 @@
 // `data-swipe-name` 
 // `data-swipe-name` 
 $(document).ready(function() {
+    var AK = 1; // animation constant
+
     var handleItemActionTransition = (function(activeName){
 
         // `activeName` keeps track of the active element (thanks, closure!)
@@ -30,7 +32,8 @@ $(document).ready(function() {
                 xTranslate  = directions[direction],
                 $target     = $parent.find("[data-swipe-name='" + targetName + "']"),
                 $notTargets = $parent.find(notTarget),
-                targetIsActive = (targetName === activeName);
+                targetIsActive = (targetName === activeName),
+                animationSequence = [];
 
             if (targetIsActive) {
                 return;
@@ -38,21 +41,35 @@ $(document).ready(function() {
 
             activeName = targetName; // update the "active" slide
 
-            $notTargets.velocity({
-                backgroundColorAlpha: 0,
-                backgroundColor: "#fff",
-                translateX: 0,
-                opacity: 0,
-                zIndex: -1,
+            animationSequence.push({
+                e: $notTargets,
+                p: {
+                    backgroundColorAlpha: 0,
+                    backgroundColor: ["#fff", "#fff"],
+                    translateX: 0,
+                    opacity: 0,
+                    zIndex: -1,
+                },
+                o: {
+                    duration: AK*200,
+                },
             });
-            // debugger;
-            $target.velocity({
-                backgroundColorAlpha: 1,
-                backgroundColor: "#fff",
-                opacity: 1,
-                translateX: [toPercentage(xTranslate), 0],
-                zIndex: 1,
+
+            animationSequence.push({
+                e: $target,
+                p: {
+                    backgroundColorAlpha: 1,
+                    backgroundColor: ["#fff", "#fff"],
+                    opacity: 1,
+                    translateX: [toPercentage(xTranslate), 0],
+                    zIndex: 1,
+                },
+                o: {
+                    duration: AK*200,
+                }
             });
+
+            $.Velocity.RunSequence(animationSequence);
 
             return false; // prevent bubbling and default
         };
@@ -62,7 +79,4 @@ $(document).ready(function() {
     // Assign swiping action
     $("[data-swipe-target]").click(handleItemActionTransition);
 
-    function itemParent() {
-
-    }
 });
