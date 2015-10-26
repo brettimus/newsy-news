@@ -33,7 +33,7 @@ $(document).ready(function() {
                 $target     = $parent.find("[data-swipe-name='" + targetName + "']"),
                 $notTargets = $parent.find(notTarget),
                 targetIsActive = (targetName === activeName),
-                animationSequence = [];
+                animations = [];
 
             if (targetIsActive) {
                 return;
@@ -41,7 +41,7 @@ $(document).ready(function() {
 
             activeName = targetName; // update the "active" slide
 
-            animationSequence.push({
+            animations.push({
                 e: $notTargets,
                 p: {
                     backgroundColorAlpha: 0,
@@ -51,11 +51,11 @@ $(document).ready(function() {
                     zIndex: -1,
                 },
                 o: {
-                    duration: AK*200,
+                    duration: AK*220,
                 },
             });
 
-            animationSequence.push({
+            animations.push({
                 e: $target,
                 p: {
                     backgroundColorAlpha: 1,
@@ -65,11 +65,15 @@ $(document).ready(function() {
                     zIndex: 1,
                 },
                 o: {
-                    duration: AK*200,
+                    duration: AK*320,
                 }
             });
 
-            $.Velocity.RunSequence(animationSequence);
+            // $.Velocity.RunSequence(animations);
+
+            animations.forEach(function(d) {
+                $.Velocity(d);
+            });
 
             return false; // prevent bubbling and default
         };
