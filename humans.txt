@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Brett Beutell -- Clown -- @rudeboot
 
 # THANKS
 
-    <name>
+    Designer News
 
 # TECHNOLOGY COLOPHON
 
