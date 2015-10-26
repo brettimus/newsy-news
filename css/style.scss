@@ -40,7 +40,7 @@ header {
 }
 
 .feed {
-  // nyu
+  overflow: hidden;
 }
 
 .item {
@@ -48,8 +48,7 @@ header {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 48em;
-  padding: 1.8em 0;
-  padding-left: 50px; // for upvote
+  padding: 1.8em .8em 1.8em 3.2em;
   position: relative;
   width: 100%;
 
@@ -60,13 +59,14 @@ header {
 
 .item-upvote {
   box-sizing: border-box;
-  height: 50px;
+  cursor: pointer;
+  height: 3.2em;
   left: 0;
   position: absolute;
   padding-top: 2em;
   text-align: center;
   top: 0;
-  width: 50px;
+  width: 3.2em;
 }
 
 .item-main {
@@ -78,7 +78,7 @@ header {
   background: $white;
   box-sizing: border-box;
   float: left;
-  padding-bottom: 48px; // item action container height
+  padding-bottom: 3.5em; // item action container height
   width: 100%;
 }
 
@@ -115,11 +115,19 @@ header {
   margin: 0;
 }
 
+.item-title-subheading {
+  color: $gray;
+  display: block;
+  font-size: .8em;
+  font-weight: $light;
+}
+
 .item-meta {
   display: block;
   font-size: .8em;
   font-weight: $light;
 }
+
 
 .item-meta-url {
   color: $gray-light;
@@ -139,14 +147,29 @@ header {
   text-decoration: none;
 }
 
+.item-action-container {
+  bottom: 0;
+  height: 3.5em;
+  left: 0;
+  position: absolute;
+}
+
 .item-action {
   background: transparent;
   border: none;
   box-sizing: border-box;
   color: $black;
+  cursor: pointer;
   display: inline-block;
   font-weight: $light;
+  height: 3.5em;
   margin: 0;
+  min-width: 3.5em;
+  padding-top: 1em;
+
+  &:not(:first-of-type) {
+    margin-left: 1em;
+  }
 }
 
 .item-action-icon {
@@ -160,28 +183,7 @@ header {
   padding: .1em .2em .2em;
 }
 
-// NEEDS a rethink
-// i'd be a fan of doing fixed-width item actions.
-// they don't need to be as wide as they are right now!
-.item-action-container {
-  min-height: 48px;
-  // position: relative;
-}
 
-.item-action-1-2 {
-  position: absolute;
-  width: 50%;
-}
-
-.item-action-1-2-left {
-  bottom: 0;
-  left: 0;
-}
-
-.item-action-1-2-right {
-  bottom: 0;
-  right: 0;
-}
 
 
 // TIL ipad and ipad mini both render at 768px for the browser! neat
@@ -197,14 +199,18 @@ header {
 
 @media only screen and (min-width: 48em) {
   body {
-    font-size: 1.25em;
+    // font-size: 1.25em;
   }
 
   .item {
     border-left: solid 2px $white-ish;
     border-right: solid 2px $white-ish;
-    padding: 2em 0;
-    width: 99%;
-    width: calc(100% - 4px);
+    padding: 1.8em .8em 1.8em 3.2em;
+    width: 100%;
   }
+
+  // .item-meta-url {
+  //   display: block;
+  //   margin: 0;
+  // }
 }
