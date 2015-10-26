@@ -1,6 +1,8 @@
 @charset "UTF-8";
 body {
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; }
 
 a {
   color: #115ABC; }
@@ -8,14 +10,15 @@ a {
 header nav {
   box-sizing: border-box;
   font-weight: 600;
-  height: 70px;
-  padding: 1.2em .5em 1.4em;
+  padding: 1.2em .5em 1.3em;
   text-align: center; }
 
 .item {
   border-bottom: solid 2px #f4f4f4;
   box-sizing: border-box;
-  padding: 2em 0;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1.8em 0;
   padding-left: 50px;
   position: relative;
   width: 100%; }
@@ -33,7 +36,7 @@ header nav {
   width: 50px; }
 
 .item-main {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 .item-body {
   position: relative; }
@@ -111,5 +114,15 @@ header nav {
  * xl  @media screen and (min-width: 80em) ≥ 1280px  .pure-u-xl-*
  *
  */
+@media only screen and (min-width: 48em) {
+  body {
+    font-size: 1.25em; }
+
+  .item {
+    border-left: solid 2px #f4f4f4;
+    border-right: solid 2px #f4f4f4;
+    padding: 2em 0;
+    width: 99%;
+    width: calc(100% - 4px); } }
 
 /*# sourceMappingURL=style.css.map */

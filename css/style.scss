@@ -21,6 +21,8 @@ $semi   : 600;
 
 body {
   font-family: $sans-serif;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -32,8 +34,7 @@ header {
   nav {
     box-sizing: border-box;
     font-weight: $semi;
-    height: 70px;
-    padding: 1.2em .5em 1.4em;
+    padding: 1.2em .5em 1.3em;
     text-align: center;
   }
 }
@@ -45,7 +46,9 @@ header {
 .item {
   border-bottom: solid 2px $white-ish; 
   box-sizing: border-box;
-  padding: 2em 0;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1.8em 0;
   padding-left: 50px; // for upvote
   position: relative;
   width: 100%;
@@ -67,7 +70,7 @@ header {
 }
 
 .item-main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .item-body {
@@ -128,7 +131,7 @@ header {
 }
 
 .item-action-icon {
-  
+
 }
 
 .item-action-microcopy {
@@ -140,7 +143,7 @@ header {
 
 // NEEDS a rethink
 // i'd be a fan of doing fixed-width item actions.
-// they don't need to be as big as they are!
+// they don't need to be as wide as they are right now!
 .item-action-container {
   min-height: 48px;
   position: relative;
@@ -161,6 +164,8 @@ header {
   right: 0;
 }
 
+
+// TIL ipad and ipad mini both render at 768px for the browser! neat
 /*
  * PURE Breakpoints
  *
@@ -170,3 +175,17 @@ header {
  * xl  @media screen and (min-width: 80em) ≥ 1280px  .pure-u-xl-*
  *
  */
+
+@media only screen and (min-width: 48em) {
+  body {
+    font-size: 1.25em;
+  }
+
+  .item {
+    border-left: solid 2px $white-ish;
+    border-right: solid 2px $white-ish;
+    padding: 2em 0;
+    width: 99%;
+    width: calc(100% - 4px);
+  }
+}
