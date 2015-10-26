@@ -17,7 +17,7 @@ header nav {
   border-bottom: solid 2px #f4f4f4;
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 48em;
   padding: 1.8em 0;
   padding-left: 50px;
   position: relative;
@@ -36,23 +36,41 @@ header nav {
   width: 50px; }
 
 .item-main {
-  overflow: hidden; }
-
-.item-body {
+  overflow: hidden;
   position: relative; }
 
+.item-body {
+  background: #fff;
+  box-sizing: border-box;
+  float: left;
+  padding-bottom: 48px;
+  width: 100%; }
+
+.item-body-left {
+  height: 100%;
+  margin-left: -100%;
+  position: absolute; }
+
+.item-body-right {
+  height: 100%;
+  right: -100%;
+  position: absolute; }
+
 .item-footer {
+  bottom: 0;
   box-sizing: border-box;
   padding-top: .75em;
+  position: absolute;
   width: 100%; }
 
 .item-title {
   text-decoration: none; }
-  .item-title h3 {
-    margin: 1.2em 0;
-    margin: 0; }
   .item-title:hover {
     text-decoration: underline; }
+
+.item-title-heading {
+  margin: 1.2em 0;
+  margin: 0; }
 
 .item-meta {
   display: block;
@@ -90,8 +108,7 @@ header nav {
   padding: .1em .2em .2em; }
 
 .item-action-container {
-  min-height: 48px;
-  position: relative; }
+  min-height: 48px; }
 
 .item-action-1-2 {
   position: absolute;

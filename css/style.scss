@@ -47,7 +47,7 @@ header {
   border-bottom: solid 2px $white-ish; 
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 48em;
   padding: 1.8em 0;
   padding-left: 50px; // for upvote
   position: relative;
@@ -71,29 +71,48 @@ header {
 
 .item-main {
   overflow: hidden;
-}
-
-.item-body {
   position: relative;
 }
 
+.item-body {
+  background: $white;
+  box-sizing: border-box;
+  float: left;
+  padding-bottom: 48px; // item action container height
+  width: 100%;
+}
+
+.item-body-left {
+  height: 100%;
+  margin-left: -100%;
+  position: absolute;
+}
+
+.item-body-right {
+  height: 100%;
+  right: -100%;
+  position: absolute;
+}
+
 .item-footer {
+  bottom: 0;
   box-sizing: border-box;
   padding-top: .75em;
+  position: absolute;
   width: 100%;
 }
 
 .item-title {
   text-decoration: none;
   
-  h3 {
-    margin: 1.2em 0;
-    margin: 0;
-  }
-
   &:hover {
     text-decoration: underline;
   }
+}
+
+.item-title-heading {
+  margin: 1.2em 0;
+  margin: 0;
 }
 
 .item-meta {
@@ -146,7 +165,7 @@ header {
 // they don't need to be as wide as they are right now!
 .item-action-container {
   min-height: 48px;
-  position: relative;
+  // position: relative;
 }
 
 .item-action-1-2 {

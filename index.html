@@ -34,10 +34,27 @@
                     <i class="fa fa-arrow-circle-up fa-fw"></i>
                 </section>
                 <div class="item-main">
-                    <!-- This will be a panel of a triptych. Mwahahaha-->
-                    <section class="item-body">
+                    <section class="item-body item-body-left" data-swipe-name="comment">
+                        <h3 class="item-title-heading">
+                            Be thoughtful.
+                            <span class="item-meta item-meta-url">
+                                We don't take kind to flame wars ’round here.
+                            </span>
+                        </h3>                        
+
+                        <footer class="item-footer item-action-container">
+                            <a class="item-action item-action-1-2 item-action-1-2-left"
+                                data-swipe-target="item" data-swipe-direction="center">
+                                <i class="fa fa-user item-action-icon"></i> 
+                                <span class="item-action-microcopy">
+                                    Back                                    
+                                </span>
+                            </a>
+                        </footer>
+                    </section>
+                    <section class="item-body item-body-center" data-swipe-name="item">
                         <a class="item-title" href="#">
-                            <h3>
+                            <h3 class="item-title-heading">
                                 Title
                                 <span class="item-meta item-meta-url">
                                     Link
@@ -51,13 +68,15 @@
                             Dan Brown
                         </a>
                         <footer class="item-footer item-action-container">
-                            <a class="item-action item-action-1-2 item-action-1-2-left">
+                            <a class="item-action item-action-1-2 item-action-1-2-left"
+                                data-swipe-target="comment" data-swipe-direction="left">
                                 <i class="fa fa-comment item-action-icon"></i> 
                                 <span class="item-action-microcopy">
                                     Sup?                                    
                                 </span>
                             </a>
-                            <a class="item-action item-action-1-2 item-action-1-2-right">
+                            <a class="item-action item-action-1-2 item-action-1-2-right"
+                                data-swipe-target="share" data-swipe-direction="right">
                                 <i class="fa fa-share item-action-icon"></i>
                                 <span class="item-action-microcopy">
                                     Omg.                                    
@@ -67,10 +86,22 @@
                     </section>
 
                     <!-- This will be a panel of a triptych. Mwahahaha-->
-                    <section class="item-body">
-                        
+                    <section class="item-body item-body-right" data-swipe-name="share">
+                        Testing Right
+
+                        <footer class="item-footer item-action-container">
+                            <a class="item-action item-action-1-2 item-action-1-2-right"
+                                data-swipe-target="item" data-swipe-direction="center">
+                                <i class="fa fa-user item-action-icon"></i> 
+                                <span class="item-action-microcopy">
+                                    Back                                    
+                                </span>
+                            </a>
+                        </footer>
                     </section>
                 </div>
+
+                <!-- TODO: Comment box -->
             </article>
 
             <article class="item item-news">
@@ -78,10 +109,27 @@
                     <i class="fa fa-arrow-circle-up fa-fw"></i>
                 </section>
                 <div class="item-main">
-                    <!-- This will be a panel of a triptych. Mwahahaha-->
-                    <section class="item-body">
+                    <section class="item-body item-body-left" data-swipe-name="comment">
+                        <h3 class="item-title-heading">
+                            Be thoughtful.
+                            <span class="item-meta item-meta-url">
+                                We don't take kind of flame wars ’round here.
+                            </span>
+                        </h3>                        
+
+                        <footer class="item-footer item-action-container">
+                            <a class="item-action item-action-1-2 item-action-1-2-left"
+                                data-swipe-target="item" data-swipe-direction="center">
+                                <i class="fa fa-user item-action-icon"></i> 
+                                <span class="item-action-microcopy">
+                                    Back                                    
+                                </span>
+                            </a>
+                        </footer>
+                    </section>
+                    <section class="item-body item-body-center" data-swipe-name="item">
                         <a class="item-title" href="#">
-                            <h3>
+                            <h3 class="item-title-heading">
                                 Title
                                 <span class="item-meta item-meta-url">
                                     Link
@@ -95,13 +143,15 @@
                             Dan Brown
                         </a>
                         <footer class="item-footer item-action-container">
-                            <a class="item-action item-action-1-2 item-action-1-2-left">
+                            <a class="item-action item-action-1-2 item-action-1-2-left"
+                                data-swipe-target="comment" data-swipe-direction="left">
                                 <i class="fa fa-comment item-action-icon"></i> 
                                 <span class="item-action-microcopy">
                                     Sup?                                    
                                 </span>
                             </a>
-                            <a class="item-action item-action-1-2 item-action-1-2-right">
+                            <a class="item-action item-action-1-2 item-action-1-2-right"
+                                data-swipe-target="share" data-swipe-direction="right">
                                 <i class="fa fa-share item-action-icon"></i>
                                 <span class="item-action-microcopy">
                                     Omg.                                    
@@ -111,8 +161,18 @@
                     </section>
 
                     <!-- This will be a panel of a triptych. Mwahahaha-->
-                    <section class="item-body">
-                        
+                    <section class="item-body item-body-right" data-swipe-name="share">
+                        Testing Right
+
+                        <footer class="item-footer item-action-container">
+                            <a class="item-action item-action-1-2 item-action-1-2-right"
+                                data-swipe-target="item" data-swipe-direction="center">
+                                <i class="fa fa-user item-action-icon"></i> 
+                                <span class="item-action-microcopy">
+                                    Back                                    
+                                </span>
+                            </a>
+                        </footer>
                     </section>
                 </div>
             </article>
@@ -124,6 +184,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="bower_components/velocity/velocity.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
