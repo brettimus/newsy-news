@@ -198,19 +198,8 @@ header {
  */
 
 @media only screen and (min-width: 48em) {
-  body {
-    // font-size: 1.25em;
-  }
-
   .item {
     border-left: solid 2px $white-ish;
     border-right: solid 2px $white-ish;
-    padding: 1.8em .8em 1.8em 3.2em;
-    width: 100%;
   }
-
-  // .item-meta-url {
-  //   display: block;
-  //   margin: 0;
-  // }
 }
