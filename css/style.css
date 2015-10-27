@@ -30,13 +30,16 @@ header nav {
 .item-upvote {
   box-sizing: border-box;
   cursor: pointer;
-  height: 3.2em;
+  height: 100%;
   left: 0;
   position: absolute;
   padding-top: 2em;
   text-align: center;
   top: 0;
   width: 3.2em; }
+
+.item-upvote--upvoted {
+  color: #ED8C18; }
 
 .item-main {
   overflow: hidden;
