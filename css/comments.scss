@@ -1,0 +1,58 @@
+.item-comments {
+  background: $white-ish;
+  box-sizing: border-box;
+  padding: .4em .5em .6em .5em;
+}
+
+.item-comments-heading {
+  font-size: 1.25em;
+  margin: .3em 0;
+}
+
+.form-comment {
+  display: block;
+  margin-bottom: 1.2em;
+}
+
+.form-comment-label {
+  color: $gray;
+  display: block;
+  font-size: .8em;
+}
+
+// TODO
+// This is ripe for a mixin
+.item-comment {
+  border-color: $white;
+  padding: 1em .2em 1.1em 2.5em;
+
+  &:first-of-type {
+   border-color: $white; 
+  }
+}
+
+.item-upvote-comment {
+  position: absolute;
+  padding-top: 1em; // padding on the .item-comment
+  width: 2.5em;
+}
+
+.item-body-comment {
+  background: transparent;
+  padding-bottom: 0;
+}
+
+.item-comment-text {
+  font-size: 90%;
+  margin-bottom: .4em;
+  padding-bottom: .2em;
+}
+
+.item-comment-metadata {
+  border-left: solid 2px $gray-light;
+  padding-left: .3em;
+}
+
+.item-meta-comment {
+  display: inline-block;
+}

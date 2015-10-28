@@ -39,6 +39,10 @@ header {
   }
 }
 
+.button-small {
+  font-size: 80%;
+}
+
 .feed {
   overflow: hidden;
 }
@@ -48,7 +52,7 @@ header {
   box-sizing: border-box;
   margin: 0 auto;
   max-width: 48em;
-  padding: 1.8em .8em 1.8em 3.2em;
+  padding: 1.8em 0 1.8em 3.2em;
   position: relative;
   width: 100%;
 
@@ -83,6 +87,7 @@ header {
   box-sizing: border-box;
   float: left;
   padding-bottom: 3.5em; // item action container height
+  padding-right: .8em;
   width: 100%;
 }
 
@@ -187,8 +192,16 @@ header {
   padding: .1em .2em .2em;
 }
 
+// TODO - move to the top (once everything is separated out)
+@import "comments";
 
+.u-hidden {
+  display: none;
+}
 
+.u-text-right {
+  text-align: right;
+}
 
 // TIL ipad and ipad mini both render at 768px for the browser! neat
 /*

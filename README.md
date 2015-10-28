@@ -5,6 +5,9 @@ Layout for a hacker-or-designer-news-esque feed.
 There is a lot of stuff in this repo. Ignore most of it.
 
 ### To build and test
+
+> You gotta have node, browserify, and sass buddy.
+
 All commands assume you're in the project root:
 
 * For the React: `cd js && watchify src/index.react.js -t babelify -o app.js`
@@ -23,7 +26,7 @@ Most deps are in the `bower_components` file.
 
 ### JS
 Most deps are listed in the `package.json` manifest.
-> You gotta have node, buddy.
+
 We are loading some boilerplate, jQuery, and Modernizr. Modernizr is not in use yet and could be removed.
 **Dependencies**
 * `jQuery`

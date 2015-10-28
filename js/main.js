@@ -4,6 +4,9 @@
 // `data-swipe-name` 
 // `data-swipe-name` 
 $(document).ready(function() {
+
+    $("")
+
     var AK = 1; // animation constant
 
     var handleItemActionTransition = (function(activeName){
@@ -33,13 +36,36 @@ $(document).ready(function() {
                 $target     = $parent.find("[data-swipe-name='" + targetName + "']"),
                 $notTargets = $parent.find(notTarget),
                 targetIsActive = (targetName === activeName),
-                animations = [];
+                animations = [],
+                $comments = $parent.find("[data-item-comments]");
 
             if (targetIsActive) {
                 return;
             }
-
             activeName = targetName; // update the "active" slide
+
+            animateSwipe({
+                hide: $notTargets,
+                show: $target,
+                xTranslate: xTranslate,
+            });
+
+            // If we are dealing with a comment, show the form.
+            if (targetName === "comment") {
+                $comments.slideDown();
+            }
+            else {
+                $comments.slideUp();
+            }
+
+            return false; // prevent bubbling and default
+        };
+
+        function animateSwipe(options) {
+            var $notTargets = options.hide,
+                $target    = options.show,
+                xTranslate  = options.xTranslate,
+                animations  = [];
 
             animations.push({
                 e: $notTargets,
@@ -74,9 +100,7 @@ $(document).ready(function() {
             animations.forEach(function(d) {
                 $.Velocity(d);
             });
-
-            return false; // prevent bubbling and default
-        };
+        }
 
     })("item");
 
