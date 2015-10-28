@@ -7,6 +7,8 @@ var data = require("./fake-data"); // array of data for Items
 
 var items = data.items;
 
+// TODO - Remove.
+//        These globals are here for experimenting.
 global.React = React;
 global.ReactDOM = ReactDOM;
 

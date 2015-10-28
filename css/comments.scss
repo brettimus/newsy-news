@@ -1,3 +1,7 @@
+// NB
+// A lot of these styles are differentially inheriting from other classes.
+// Name-wise, it should be easy to tell which are doing this, but it could be bad news bears in teh future.
+
 .item-comments {
   background: $white-ish;
   box-sizing: border-box;
@@ -20,8 +24,13 @@
   font-size: .8em;
 }
 
+.form-comment-button-container {
+  margin: .5em 0 .6em;
+  text-align: left;
+}
+
 // TODO
-// This is ripe for a mixin
+// This is ripe for a mixin or extension of a (ghost?) element
 .item-comment {
   border-color: $white;
   padding: 1em .2em 1.1em 2.5em;
@@ -55,4 +64,8 @@
 
 .item-meta-comment {
   display: inline-block;
+}
+
+@media only screen and (min-width: 48em) {
+  
 }

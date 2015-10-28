@@ -5,8 +5,6 @@
 // `data-swipe-name` 
 $(document).ready(function() {
 
-    $("")
-
     var AK = 1; // animation constant
 
     var handleItemActionTransition = (function(activeName){
